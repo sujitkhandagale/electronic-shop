@@ -32,6 +32,12 @@ function HeroSlider() {
             alt="image"
             width={1920}
             height={1080}
+            // priority={true}
+            fetchpriority="high"
+            draggable={true}
+            unoptimized={true}
+            quality={100}
+            // layout="fill"
           />
         </SwiperSlide>
         <SwiperSlide>Slide 2</SwiperSlide>
