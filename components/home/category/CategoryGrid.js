@@ -9,7 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 // import required modules
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay, EffectFade, Navigation } from "swiper/modules";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { FiSearch } from "react-icons/fi";
 import ImageAsset from "@/components/loader/ImageAsset";
@@ -88,8 +88,9 @@ function CategoryGrid() {
         }}
         grabCursor={true}
         // points hide
-
-        modules={[Navigation, Autoplay]}
+        effect={"slide"}
+        speed={800}
+        modules={[Navigation, Autoplay, EffectFade]}
         className={style.product_category}
       >
         {Category.map((item, index) => {

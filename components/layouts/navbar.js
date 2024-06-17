@@ -3,7 +3,6 @@ import style from "./navbar.module.scss";
 import Image from "next/image";
 import { IoCloseSharp, IoSearch } from "react-icons/io5";
 import Link from "next/link";
-import { useMediaQuery } from "@/utility/media/MediaQuery";
 import { HiOutlineMenu } from "react-icons/hi";
 import { MdHome } from "react-icons/md";
 import { IoIosArrowForward, IoIosInformationCircle } from "react-icons/io";
@@ -19,12 +18,10 @@ function Navbar() {
     "Tech News: Fan automation will launch soon.!",
   ];
 
-  const isMobile = useMediaQuery(768);
   const router = useRouter();
   const { pathname } = router;
   console.log("pathname", pathname);
   const [hoverData, setHoverData] = useState({});
-  console.log("hoverData", hoverData);
   return (
     <nav className={style.navbar}>
       <div className={"container"}>
@@ -39,12 +36,8 @@ function Navbar() {
               />
             </div>
           </Link>
-          {isMobile ? (
-            <>
-              <SidebarOptions />
-            </>
-          ) : (
-            <>
+          <>
+            <div className={style.is_mobile}>
               <div className={style.nav_links}>
                 {Menu.map((item) => {
                   return (
@@ -99,8 +92,11 @@ function Navbar() {
                   </button>
                 </div>
               </div>
-            </>
-          )}
+            </div>
+            <div className={style.is_desktop}>
+              <SidebarOptions />
+            </div>
+          </>
         </div>
       </div>
       <div className={style.news_ticker}>

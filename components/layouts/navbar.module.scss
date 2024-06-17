@@ -375,3 +375,16 @@
     }
   }
 }
+
+.is_mobile {
+  display: none;
+  @media only screen and (min-width: 769px) {
+    display: unset;
+  }
+}
+.is_desktop {
+  display: none;
+  @media only screen and (max-width: 769px) {
+    display: unset;
+  }
+}

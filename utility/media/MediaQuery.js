@@ -1,24 +1,28 @@
 import { useState, useEffect } from "react";
 
-export const useMediaQuery = (width) => {
-  const [matches, setMatches] = useState(false);
+// Custom hook for media query detection
+function useMediaQuery(query) {
+  const [matches, setMatches] = useState(null);
 
   useEffect(() => {
-    const mediaQuery = window?.matchMedia(`(max-width: ${width}px)`);
-    // Set initial value
-    setMatches(mediaQuery.matches);
+    const mediaQueryList = window.matchMedia(query);
 
-    const handleChange = (event) => {
+    setMatches(mediaQueryList?.matches);
+
+    // Function to update 'matches' when the media query changes
+    const mediaQueryListener = (event) => {
       setMatches(event.matches);
     };
+    // Add and remove the listener when the component mounts/unmounts
+    mediaQueryList.addEventListener("change", mediaQueryListener);
 
-    mediaQuery.addEventListener("change", handleChange);
-
-    // Clean up
     return () => {
-      mediaQuery.removeEventListener("change", handleChange);
+      // Clean up the listener when the component unmounts
+      mediaQueryList.removeEventListener("change", mediaQueryListener);
     };
-  }, [width]);
+  }, [query]);
 
   return matches;
-};
+}
+
+export default useMediaQuery;

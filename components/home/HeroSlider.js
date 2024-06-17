@@ -8,7 +8,7 @@ import imagePlaceholder from "../../assets/18494353_6003842.jpg";
 import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination, EffectFade } from "swiper/modules";
 import Image from "next/image";
 
 function HeroSlider() {
@@ -26,10 +26,12 @@ function HeroSlider() {
         }}
         loop={true}
         autoplay={{
-          delay: 1500,
+          delay: 2500,
           disableOnInteraction: false,
         }}
-        modules={[Pagination, Navigation, Autoplay]}
+        effect={"slide"}
+        speed={1000}
+        modules={[Pagination, Navigation, Autoplay, EffectFade]}
         navigation={false}
         className={style.slider}
       >
