@@ -2,26 +2,28 @@ import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import style from "./hero-slider.module.scss";
+import imagePlaceholder from "../../assets/18494353_6003842.jpg";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
-import ImageAsset from "@/components/loader/ImageAsset";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
 
 function HeroSlider() {
   return (
     <div>
       <Swiper
-          pagination={{
-              dynamicBullets: true,
-              clickable: true,
-              renderBullet: function (index, className) {
-                  return '<span class="' + className + ' ' + style.bullet + '"></span>';
-              },
-          }}
+        pagination={{
+          dynamicBullets: true,
+          clickable: true,
+          renderBullet: function (index, className) {
+            return (
+              '<span class="' + className + " " + style.bullet + '"></span>'
+            );
+          },
+        }}
         loop={true}
         autoplay={{
           delay: 1500,
@@ -33,7 +35,7 @@ function HeroSlider() {
       >
         <SwiperSlide>
           <Image
-            src={"https://picsum.photos/1920/1080"}
+            src={imagePlaceholder}
             alt="image"
             width={1920}
             height={1080}
@@ -45,8 +47,34 @@ function HeroSlider() {
             // layout="fill"
           />
         </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src={imagePlaceholder}
+            alt="image"
+            width={1920}
+            height={1080}
+            // priority={true}
+            fetchpriority="high"
+            draggable={true}
+            unoptimized={true}
+            quality={100}
+            // layout="fill"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Image
+            src={imagePlaceholder}
+            alt="image"
+            width={1920}
+            height={1080}
+            // priority={true}
+            fetchpriority="high"
+            draggable={true}
+            unoptimized={true}
+            quality={100}
+            // layout="fill"
+          />
+        </SwiperSlide>
       </Swiper>
     </div>
   );

@@ -28,86 +28,86 @@ function CategoryGrid() {
           modern residences.
         </p>
       </div>
-      <div>
-        <div className={style.arrows}>
-          <div className="custom-swiper-button-prev">
-            <button>
-              <FaArrowLeft />
-            </button>
-          </div>
-          <div className="custom-swiper-button-next">
-            <button>
-              <FaArrowRight />
-            </button>
-          </div>
+      <h2 className={"text-center"}>Categories</h2>
+      <div data-aos="fade-right" className={style.arrows}>
+        <div className="custom-swiper-button-prev">
+          <button>
+            <FaArrowLeft />
+          </button>
         </div>
-        <Swiper
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          slidesPerView={6}
-          spaceBetween={30}
-          loop={true}
-          breakpoints={{
-            1800: {
-              slidesPerView: 6,
-              spaceBetween: 30,
-            },
-            1200: {
-              slidesPerView: 5,
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 30,
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-            640: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            320: {
-              slidesPerView: 2,
-              spaceBetween: 10,
-            },
-            150: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-          }}
-          navigation={{
-            nextEl: ".custom-swiper-button-next",
-            prevEl: ".custom-swiper-button-prev",
-          }}
-          grabCursor={true}
-          // points hide
-
-          modules={[Navigation, Autoplay]}
-          className={style.product_category}
-        >
-          {Category.map((item, index) => {
-            return (
-              <SwiperSlide className={style.category} key={index}>
-                <img src={item.image} alt={item.name} />
-                <div className={style.title}>
-                  <a href={item.link}>{item.name}</a>
-                </div>
-                <div className={style.view_more}>
-                  <div className={style.icon}>
-                    <FiSearch />
-                  </div>
-
-                  <a href={item.link}>View More</a>
-                </div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+        <div className="custom-swiper-button-next">
+          <button>
+            <FaArrowRight />
+          </button>
+        </div>
       </div>
+      <Swiper
+        data-aos="fade-right"
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        slidesPerView={6}
+        spaceBetween={30}
+        loop={true}
+        breakpoints={{
+          1800: {
+            slidesPerView: 6,
+            spaceBetween: 30,
+          },
+          1200: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          150: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+        }}
+        navigation={{
+          nextEl: ".custom-swiper-button-next",
+          prevEl: ".custom-swiper-button-prev",
+        }}
+        grabCursor={true}
+        // points hide
+
+        modules={[Navigation, Autoplay]}
+        className={style.product_category}
+      >
+        {Category.map((item, index) => {
+          return (
+            <SwiperSlide className={style.category} key={index}>
+              <img src={item.image} alt={item.name} />
+              <div className={style.title}>
+                <a href={item.link}>{item.name}</a>
+              </div>
+              <div className={style.view_more}>
+                <div className={style.icon}>
+                  <FiSearch />
+                </div>
+
+                <a href={item.link}>View More</a>
+              </div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
     </div>
   );
 }

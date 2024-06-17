@@ -6,7 +6,7 @@
   width: 100%;
   box-sizing: border-box;
   .label {
-    background: #d43300;
+    background: #232323;
     color: white;
     padding: 10px;
     .info {
@@ -45,6 +45,7 @@
     flex-direction: row;
     gap: 30px;
     box-sizing: border-box;
+    flex-wrap: wrap;
     .brand {
       display: flex;
       flex-direction: column;
@@ -101,18 +102,26 @@
         list-style: none;
         margin: 0;
         padding: 0;
+        width: 100%;
         li {
+          display: flex;
           margin: 5px 0;
           padding: 0;
           font-size: 14px;
           line-height: 1.5;
           text-align: left;
+          width: 100%;
+          border-bottom: 2px solid transparent;
+          transition: border 0.3s ease-in-out;
+          &:hover {
+            border-bottom: 2px solid #d43300;
+          }
           a {
             color: #333;
             text-decoration: none;
-            &:hover {
-              text-decoration: underline;
-            }
+            font-weight: 600;
+            font-size: 14px;
+            width: 100%;
           }
         }
       }
@@ -128,17 +137,55 @@
         font-size: 14px;
         line-height: 1.5;
       }
+      .phone {
+        display: flex;
+        flex-direction: row;
+        padding: 4px 0;
+        gap: 10px;
+        align-items: center;
+        .icon {
+          font-size: 30px;
+          padding: 10px;
+          height: 60px;
+          width: 60px;
+          background: #d43300;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 10px;
+        }
+        .numbers {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 5px;
+          p {
+            margin: 0;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #d43300;
+            font-weight: 600;
+          }
+        }
+      }
     }
   }
 }
 .copy_right {
   margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #d43300;
+  width: 100%;
+  padding: 0 10px;
   p {
     padding: 10px;
     margin: 0;
     color: white;
     font-size: 14px;
     line-height: 1.5;
-    background: #d43300;
   }
 }

@@ -40,7 +40,52 @@
       flex-direction: row;
       justify-content: flex-end;
       align-items: center;
-      gap: 5px;
+      gap: 2px;
+      flex-wrap: wrap;
+
+      .link {
+        position: relative;
+
+        .dropdown {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: white;
+          padding: 10px;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          //z-index: 1;
+          width: fit-content;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: flex-start;
+          z-index: 999;
+
+          .list {
+            white-space: nowrap;
+
+            a {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+              width: 100%;
+              text-align: left;
+              font-size: 14px;
+            }
+          }
+
+          .extra {
+            padding: 10px;
+          }
+        }
+
+        &:hover .dropdown {
+          display: flex;
+        }
+      }
+
       a,
       span {
         cursor: pointer;
@@ -55,30 +100,38 @@
         font-style: normal;
         padding: 5px 10px;
         border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         transition: background 0.3s ease;
+
         &:hover {
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
           background: #d43300d9;
           color: white;
         }
       }
+
       .selected {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         color: white;
         background: #d43300d9;
       }
+
       .search {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: row;
         gap: 5px;
+        padding: 0 10px;
+
         input {
           border: none;
           outline: none;
           padding: 10px 10px;
           border-radius: 5px;
+          width: 100%;
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
+
         button {
           background: #d43300d9;
           color: white;
@@ -103,6 +156,7 @@
     padding: 10px 0;
     box-sizing: border-box;
     position: relative;
+
     .title {
       position: absolute;
       left: 0;
@@ -135,6 +189,189 @@
     }
     100% {
       transform: translateX(-100%);
+    }
+  }
+}
+
+.sidebar {
+  .menu_button {
+    height: 35px;
+    width: 41px;
+    font-size: 32px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background: white;
+    color: #d43300d9;
+    transition: background 0.3s ease;
+
+    svg {
+      height: 32px;
+      width: 32px;
+    }
+
+    &:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      color: white !important;
+      background: #d43300d9;
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .sidebar_options {
+    overflow: auto;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 999;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex-direction: column;
+    gap: 10px;
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 10px;
+      background: whitesmoke !important;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        color: white;
+      }
+    }
+
+    .options {
+      padding-top: 35px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      a {
+        text-decoration: none;
+      }
+
+      .option {
+        transition: background 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        //gap: 10px;
+        width: 100%;
+        border-radius: 6px;
+        cursor: pointer;
+
+        .search {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: row;
+          gap: 5px;
+          width: 100%;
+          box-sizing: border-box;
+
+          input {
+            border: none;
+            outline: none;
+            padding: 10px 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          }
+
+          button {
+            background: #d43300d9;
+            color: white;
+            border: none;
+            outline: none;
+            padding: 10px 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+          }
+        }
+
+        .menu_link {
+          padding: 8px;
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: 500;
+          color: #333;
+          transition: background 0.3s ease;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+          width: 100%;
+          border-radius: 6px;
+
+          a {
+            text-decoration: none;
+          }
+        }
+
+        .sub {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 10px;
+          width: 100%;
+          padding: 8px;
+          border-radius: 6px;
+        }
+
+        .sub_menu {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 1px;
+          width: 100%;
+          background: whitesmoke;
+          font-size: 14px;
+          padding: 10px;
+          border-radius: 6px;
+        }
+
+        .icon_and_label {
+          display: flex;
+          flex-direction: row;
+          gap: 8px;
+          align-items: center;
+
+          svg {
+            height: 20px;
+            width: 20px;
+          }
+
+          justify-content: flex-start;
+        }
+
+        .arrow {
+          height: 20px;
+          width: 20px;
+        }
+      }
+
+      .selected {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: white;
+        background: #d43300d9;
+      }
     }
   }
 }

@@ -14,8 +14,13 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+  min-height: 60vh;
 }
 
+.main {
+  min-height: 60vh;
+  //background-color: $primary-color;
+}
 /* Basic CSS reset */
 * {
   margin: 0;
@@ -82,4 +87,8 @@ body {
     max-width: 100%;
     padding: 5px;
   }
+}
+
+.text-center {
+  text-align: center;
 }

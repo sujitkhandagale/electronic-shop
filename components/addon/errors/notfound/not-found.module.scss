@@ -1,0 +1,12 @@
+.not_found {
+  display: flex;
+  height: 80vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  svg {
+    height: 350px;
+    width: 350px;
+  }
+}

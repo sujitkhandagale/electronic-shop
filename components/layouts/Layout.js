@@ -7,8 +7,10 @@ function Layout({ children }) {
   return (
     <div>
       <Navbar />
-      {children}
-      <WhatsappWidget />
+      <div className="main">
+        {children}
+        <WhatsappWidget />
+      </div>
       <Footer />
     </div>
   );
