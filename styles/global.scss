@@ -3,10 +3,9 @@
 
 //variables for global use
 
-$primary-color: #d43300d9;
-$secondary-color: #d43300;
-$primary-font: "Poppins", sans-serif;
-$secondary-font: "Lato", sans-serif;
+.light {
+  --primary-color: #d43300 !important;
+}
 
 body {
   margin: 0;
@@ -17,10 +16,17 @@ body {
   min-height: 60vh;
 }
 
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
 .main {
   min-height: 60vh;
+  overflow: hidden;
   //background-color: $primary-color;
 }
+
 /* Basic CSS reset */
 * {
   margin: 0;

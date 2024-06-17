@@ -31,7 +31,7 @@ function CategoryGrid() {
         </p>
       </div>
       <h2 className={"text-center"}>Categories</h2>
-      <div data-aos="fade-right" className={style.arrows}>
+      <div data-aos="fade-left" className={style.arrows}>
         <div className="custom-swiper-button-prev">
           <button>
             <FaArrowLeft />
@@ -44,7 +44,7 @@ function CategoryGrid() {
         </div>
       </div>
       <Swiper
-        data-aos="fade-right"
+        data-aos="fade-left"
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,

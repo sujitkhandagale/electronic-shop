@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "title": "The Importance of Regular Switch Maintenance",
+    "author": "John Doe",
+    "date": "2022-01-01",
+    "content": "Regular maintenance of your electric switches is crucial to ensure safety and efficiency. Learn how to do it properly in this post.",
+    "description": "Maintenance is key to extending the life of your electric switches. Read on to learn more about the importance of regular switch maintenance.",
+    "image": {
+      "url": "https://iili.io/d96StTX.md.jpg",
+      "alt": "Switch Maintenance"
+    },
+    "views": 250,
+    "slug": "regular-switch-maintenance"
+  },
+  {
+    "id": 2,
+    "title": "Top 5 Electric Switch Brands You Can Trust",
+    "author": "Jane Smith",
+    "date": "2022-01-15",
+    "content": "Looking for a reliable electric switch brand? Check out our top 5 picks and why we recommend them.",
+    "description": "Choosing the right electric switch brand can be overwhelming. Here are our top 5 picks and why we trust them.",
+    "image": {
+      "url": "https://iili.io/d96SDjn.md.jpg",
+      "alt": "Electric Switch Brands"
+    },
+    "views": 500,
+    "slug": "top-electric-switch-brands"
+  },
+  {
+    "id": 3,
+    "title": "How to Choose the Right Electric Switch for Your Home",
+    "author": "Bob Johnson",
+    "date": "2022-02-01",
+    "content": "With so many electric switch options available, choosing the right one can be overwhelming. Here's a guide to help you make the right decision.",
+    "description": "Choosing the right electric switch for your home can be a daunting task. Here's a step-by-step guide to help you make the right choice.",
+    "image": {
+      "url": "https://iili.io/d96SGIe.md.jpg",
+      "alt": "Choosing the Right Switch"
+    },
+    "views": 120,
+    "slug": "choosing-the-right-switch"
+  },
+  {
+    "id": 4,
+    "title": "The Benefits of Smart Electric Switches",
+    "author": "John Doe",
+    "date": "2022-02-15",
+    "content": "Smart electric switches are the future of home automation. Learn about their benefits and how they can improve your daily life.",
+    "description": "Smart electric switches are revolutionizing home automation. Learn about the benefits and how they can make your life easier.",
+    "image": {
+      "url": "https://iili.io/d96SrCJ.md.webp",
+      "alt": "Smart Electric Switches"
+    },
+    "views": 800,
+    "slug": "benefits-of-smart-switches"
+  },
+  {
+    "id": 5,
+    "title": "Electric Switch Safety Tips for Homeowners",
+    "author": "Jane Smith",
+    "date": "2022-03-01",
+    "content": "Electric switches can be hazardous if not used properly. Here are some safety tips to keep in mind.",
+    "description": "Safety first! Learn about the importance of electric switch safety and how to avoid common hazards.",
+    "image": {
+      "url": "https://iili.io/d96Ul6v.jpg",
+      "alt": "Electric Switch Safety"
+    },
+    "views": 300,
+    "slug": "electric-switch-safety-tips"
+  },
+  {
+    "id": 6,
+    "title": "The History of Electric Switches: From Past to Present",
+    "author": "Bob Johnson",
+    "date": "2022-03-15",
+    "content": "Ever wondered how electric switches evolved over time? Take a journey through history and learn about the milestones that shaped the industry.",
+    "description": "Take a step back in time and learn about the fascinating history of electric switches.",
+    "image": {
+      "url": "https://iili.io/d96Uana.jpg",
+      "alt": "History of Electric Switches"
+    },
+    "views": 200,
+    "slug": "history-of-electric-switches"
+  }
+]

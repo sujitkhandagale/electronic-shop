@@ -15,8 +15,8 @@ function Navbar() {
   const newsItems = [
     "Breaking News: Market hits an all-time high!",
     "Sports Update: Local team wins championship!",
-    "Weather Alert: Heavy rain expected tomorrow!",
-    "Tech News: New smartphone release next month!",
+    "We are replacing damage switches connect through contact us.!",
+    "Tech News: Fan automation will launch soon.!",
   ];
 
   const isMobile = useMediaQuery(768);
