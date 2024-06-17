@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import { Autoplay, Navigation } from "swiper/modules";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { FiSearch } from "react-icons/fi";
+import ImageAsset from "@/components/loader/ImageAsset";
 
 function CategoryGrid() {
   return (
@@ -19,12 +20,13 @@ function CategoryGrid() {
       <div className={style.header}>
         <h2>THE WORLD OF ELECTRICAL SOLUTIONS FOR MODERN HOMES</h2>
         <p>
-          Step into the future of home living with "The World of Electrical
-          Solutions for Modern Homes." This comprehensive guide is your gateway
+          Step into the future of home living with The World of Electrical
+          Solutions for Modern Homes. This comprehensive guide is your gateway
           to transforming any living space into a smart, efficient, and secure
-          haven. Whether you're an enthusiastic DIY homeowner, a professional
-          electrician, or an interior designer, this book offers cutting-edge
-          insights into the latest electrical innovations tailored for today's
+          haven. Whether {"you're"} an enthusiastic DIY homeowner, a
+          professional electrician, or an interior designer, this book offers
+          cutting-edge insights into the latest electrical innovations tailored
+          for {"today's"}
           modern residences.
         </p>
       </div>
@@ -93,7 +95,12 @@ function CategoryGrid() {
         {Category.map((item, index) => {
           return (
             <SwiperSlide className={style.category} key={index}>
-              <img src={item.image} alt={item.name} />
+              <ImageAsset
+                width={1920}
+                height={1080}
+                src={item?.image}
+                alt={item?.name}
+              />
               <div className={style.title}>
                 <a href={item.link}>{item.name}</a>
               </div>

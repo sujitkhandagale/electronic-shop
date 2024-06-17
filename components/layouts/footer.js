@@ -9,7 +9,7 @@ import { HiOutlineEnvelope } from "react-icons/hi2";
 
 function Footer() {
   return (
-    <div data-aos="fade-up"  className={"footer"}>
+    <div data-aos="fade-up" className={"footer"}>
       <div className={`${style.footer}`}>
         <div className={style.label}>
           <div className="container">
@@ -35,15 +35,15 @@ function Footer() {
               />
               <i>Electronics Shop By Code Sujit</i>
               <p>
-                Step into the future of home living with "The World of
-                Electrical Solutions for Modern Homes." This comprehensive guide
-                is your gateway to transforming any living space into a smart,
+                Step into the future of home living with The World of Electrical
+                Solutions for Modern Homes. This comprehensive guide is your
+                gateway to transforming any living space into a smart,
                 efficient, ...
               </p>
             </div>
             <div className={style.address}>
               <b>Address</b>
-              <p>19A, Sunshine Building, Opp: Domino's Pizza,</p>
+              <p>19A, Sunshine Building, Opp: {"Domino's"} Pizza,</p>
               <p>1st Cross Road, Lokhandwala, Market,</p>
               <p>Andheri West, Mumbai, Maharashtra 400053, India</p>
               <iframe
