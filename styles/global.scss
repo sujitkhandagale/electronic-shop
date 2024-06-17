@@ -1,6 +1,13 @@
 //import font
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+//variables for global use
+
+$primary-color: #d43300d9;
+$secondary-color: #d43300;
+$primary-font: "Poppins", sans-serif;
+$secondary-font: "Lato", sans-serif;
+
 body {
   margin: 0;
   padding: 0;
@@ -8,15 +15,71 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-a {
+
+/* Basic CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-//container
-
-/* Base styles for the container */
+/* Container class styling */
 .container {
   width: 100%;
-  max-width: 1400px; /* Maximum width for larger screens */
-  margin: 0 auto; /* Center the container */
-  box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 2560px) {
+  .container {
+    max-width: 1920px;
+  }
+}
+
+@media (max-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 500px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 5px;
+  }
 }

@@ -1,0 +1,25 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+
+  button {
+    color: #d43300;
+    background: white;
+    border: none;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  //target button variant here
+  button[variant="primary"] {
+    background: #d43300;
+    color: white;
+  }
+
+  //  variants
+}

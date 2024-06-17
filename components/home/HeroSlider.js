@@ -1,13 +1,13 @@
 import React from "react";
 // Import Swiper React components
-import {Swiper, SwiperSlide} from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import style from "./hero-slider.module.scss";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
-import {Pagination} from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import ImageAsset from "@/components/loader/ImageAsset";
 import Image from "next/image";
 
@@ -15,15 +15,20 @@ function HeroSlider() {
   return (
     <div>
       <Swiper
-        pagination={{
-          dynamicBullets: true,
-          clickable: true,
-          autoplay: {
-            delay: 1000,
-            disableOnInteraction: false,
-          },
+          pagination={{
+              dynamicBullets: true,
+              clickable: true,
+              renderBullet: function (index, className) {
+                  return '<span class="' + className + ' ' + style.bullet + '"></span>';
+              },
+          }}
+        loop={true}
+        autoplay={{
+          delay: 1500,
+          disableOnInteraction: false,
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Navigation, Autoplay]}
+        navigation={false}
         className={style.slider}
       >
         <SwiperSlide>

@@ -6,3 +6,16 @@
     object-fit: cover;
   }
 }
+
+.bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #d43300 !important;
+  border-radius: 50%;
+  margin: 0 4px 20px 4px !important; /* Adjust the margin values as needed */
+  transition: background-color 0.3s;
+
+  &.swiper-pagination-bullet-active {
+    background-color: #d43300 !important;
+  }
+}
