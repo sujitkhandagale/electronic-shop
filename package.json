@@ -10,13 +10,14 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "next": "14.2.3",
+    "next": "^14.2.4",
     "next-themes": "^0.3.0",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
     "sass": "^1.77.4",
     "scss": "^0.2.4",
+    "sharp": "^0.33.4",
     "swiper": "^11.1.4"
   },
   "devDependencies": {
