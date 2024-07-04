@@ -51,14 +51,10 @@ function AboutUsComponent() {
       <div className={style.team_d}>
         <h2>Meet Our Team</h2>
       </div>
-      <div className={style.about_grid}>
+      <div data-aos="fade-right" className={style.about_grid}>
         {director.map((item, index) => {
           return (
-            <div
-              data-aos="fade-right"
-              key={index}
-              className={style.about_grid_item}
-            >
+            <div key={index} className={style.about_grid_item}>
               <div className={style.about_grid_item_image}>
                 <div className={style.title}>
                   <h3>{item.title}</h3>

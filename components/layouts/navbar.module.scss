@@ -194,6 +194,7 @@
 }
 
 .sidebar {
+  position: relative;
   .menu_button {
     height: 35px;
     width: 41px;
@@ -208,6 +209,7 @@
     background: white;
     color: var(--primary-color);
     transition: background 0.3s ease;
+    z-index: 999;
 
     svg {
       height: 32px;
@@ -244,7 +246,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      margin: 10px;
+      margin: 15px;
       background: whitesmoke !important;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
@@ -254,7 +256,7 @@
     }
 
     .options {
-      padding-top: 35px;
+      padding-top: 65px;
       display: flex;
       flex-direction: column;
       gap: 2px;

@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useRef, useState } from "react";
 import style from "./navbar.module.scss";
 import Image from "next/image";
 import { IoCloseSharp, IoSearch } from "react-icons/io5";
@@ -245,9 +245,23 @@ const SidebarOptions = () => {
       </div>
     ));
   };
+  const ref = useRef();
+
+  // outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current?.contains(event.target)) {
+        setHide(true);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
 
   return (
-    <div className={style.sidebar}>
+    <div ref={ref} className={style.sidebar}>
       <div onClick={handleClick} className={style.menu_button}>
         <HiOutlineMenu />
       </div>

@@ -7,7 +7,7 @@ import BlogSidebar, {
 import blogs from "../data/blogs.json";
 import Link from "next/link";
 
-function BlogGrid() {
+function BlogGrid({ index, sidebar }) {
   return (
     <div className={style.blog_container}>
       <div className={style.blogs}>
@@ -38,9 +38,13 @@ function BlogGrid() {
           );
         })}
       </div>
-      <div className={style.sidebar}>
-        <BlogSidebar />
-      </div>
+      {sidebar === false ? (
+        <></>
+      ) : (
+        <div className={style.sidebar}>
+          <BlogSidebar />
+        </div>
+      )}
     </div>
   );
 }

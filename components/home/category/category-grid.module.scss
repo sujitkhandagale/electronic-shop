@@ -42,12 +42,12 @@
     }
   }
 }
-
 .product_category {
   display: flex;
   flex-direction: row;
   gap: 30px;
   flex-wrap: wrap;
+  padding-bottom: 40px;
 
   .category {
     display: flex;
