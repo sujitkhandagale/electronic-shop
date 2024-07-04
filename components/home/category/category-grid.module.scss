@@ -60,6 +60,9 @@
     border-radius: 6px;
     height: 300px;
     overflow: hidden;
+    @media only screen and (max-width: 769px) {
+      height: 210px;
+    }
 
     .view_more {
       display: none;
