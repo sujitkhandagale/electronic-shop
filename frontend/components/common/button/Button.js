@@ -1,7 +1,7 @@
-import React from "react";
-import style from "./button.module.scss";
+import React from 'react';
+import style from './button.module.scss';
 
-function Button(props, { variant }) {
+function Button(props) {
   return (
     <div className={style.button}>
       <button {...props}>{props?.children}</button>
