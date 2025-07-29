@@ -26,7 +26,7 @@ function Navbar() {
     <nav className={style.navbar}>
       <div className={"container"}>
         <div className={style.info}>
-          <Link title={"Lazada"} href={"/"}>
+          <Link title={"Lazada"} href={"/frontend/public"}>
             <div className={style.logo}>
               <Image
                 src="https://static.cdnlogo.com/logos/l/75/lazada.svg"
